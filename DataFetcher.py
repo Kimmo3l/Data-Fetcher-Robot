@@ -11,7 +11,7 @@ def robot_spare_bin_python():
     browser.configure(
         slowmo=100,
     )
-    open_the_intranet_website()
+    open_the_porssisahko_website()
     log_in()
     download_excel_file()
     fill_form_with_excel_data()
@@ -21,7 +21,7 @@ def robot_spare_bin_python():
 
 def open_the_intranet_website():
     """Navigates to the given URL"""
-    browser.goto("https://robotsparebinindustries.com/")
+    browser.goto("https://www.porssisahkoa.fi/")
 
 def log_in():
     """Fills in the login form and clicks the 'Log in' button"""
