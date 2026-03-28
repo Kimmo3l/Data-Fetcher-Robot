@@ -6,8 +6,8 @@ from RPA.Excel.Files import Files
 from RPA.PDF import PDF
 
 @task
-def robot_spare_bin_python():
-    """Insert the sales data for the week and export it as a PDF"""
+def robot_data_fetcher_python():
+    """Get the sahkodata and insert it to excel"""
     browser.configure(
         slowmo=100,
     )
