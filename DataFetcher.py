@@ -34,35 +34,52 @@ def open_porssisahko_website():
     """Open the porssisahko website"""
     browser.goto("https://www.porssisahko.fi/")
 
-def fetch_sahko_prices():
-    """Fetch the cheapest and most expensive prices for the day"""
+def fetch_hourly_prices():
+    """Hakee tunnittain sähkön hinnat sivulta."""
     page = browser.page()
+    tunnit_hinnat = []
 
-### Nämä eivät ole vielä oikein
-    halvin_hinta = float(page.locator(".price-min").inner_text().split()[0])
-    kallein_hinta = float(page.locator(".price-max").inner_text().split()[0])
+    # Oletetaan, että hinnat ovat taulukossa, jossa jokaisella rivillä on tunti ja hinta
+    for i in range(24):
+        tunti = f"{i:02d}-{i+1:02d}"
+        hinta_elementti = page.locator(f"tr:nth-child({i+1}) td:nth-child(2)")
+        hinta = float(hinta_elementti.inner_text().split()[0])
+        tunnit_hinnat.append({"Tunti": tunti, "Hinta (snt/kWh)": hinta})
 
-    return halvin_hinta, kallein_hinta
+    return tunnit_hinnat
 
-def save_to_excel(halvin_hinta, kallein_hinta):
-    """Save prices to Excel by date"""
+def save_to_excel(tunnit_hinnat, excel_filename):
+    """Tallentaa tunnittain hinnat staattiseen Excel-tiedostoon."""
     excel = Files()
-    today = datetime.now().strftime("%Y-%m-%d")
-    excel_filename = f"sahko_hinnat_{today}.xlsx"
 
-### Testausta tälle
-    data = [
-        {"Päivämäärä": today, "Halvin hinta (snt/kWh)": halvin_hinta, "Kallein hinta (snt/kWh)": kallein_hinta}
-    ]
-    excel.create_workbook()
+    # Avaa olemassa oleva tiedosto tai luo uusi
+    if os.path.exists(excel_filename):
+        excel.open_workbook(excel_filename)
+    else:
+        excel.create_workbook()
+
+    # Lisää uusi rivi päivämäärällä
+    today = datetime.now().strftime("%Y-%m-%d")
+    data = [{"Päivämäärä": today, **tunti} for tunti in tunnit_hinnat]
     excel.append_rows_to_worksheet(data, header=True)
     excel.save_workbook(excel_filename)
 
-    return excel_filename
+def calculate_prices_and_savings(excel_filename):
+    """Laskee halvimman, kalleimman hinnan ja säästön."""
+    excel = Files()
+    excel.open_workbook(excel_filename)
+    worksheet = excel.read_worksheet_as_table(header=True)
 
-def calculate_savings(halvin_hinta, kallein_hinta):
-    """Calculate savings with this device (3 kWh/h)."""
-    return (kallein_hinta - halvin_hinta) * 3
+    # Etsi viimeisimmän päivän hinnat
+    today = datetime.now().strftime("%Y-%m-%d")
+    today_data = [row for row in worksheet if row["Päivämäärä"] == today]
+
+    hinnat = [float(row["Hinta (snt/kWh)"]) for row in today_data]
+    halvin_hinta = min(hinnat)
+    kallein_hinta = max(hinnat)
+    saasto = (kallein_hinta - halvin_hinta) * 3  # 3 kWh/h
+
+    return halvin_hinta, kallein_hinta, saasto
 
 def backup_excel(excel_filename):
     """Make a backup of the excel-file"""
