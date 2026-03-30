@@ -30,56 +30,62 @@ def robot_data_fetcher():
         excel.close_workbook()
 
 
-def open_the_intranet_website():
-    """Navigates to the given URL"""
-    browser.goto("https://www.porssisahkoa.fi/")
+def open_porssisahko_website():
+    """Open the porssisahko website"""
+    browser.goto("https://www.porssisahko.fi/")
 
-def log_in():
-    """Fills in the login form and clicks the 'Log in' button"""
-    page = browser.page()
-    page.fill("#username", "maria")
-    page.fill("#password", "thoushallnotpass")
-    page.click("button:text('Log in')")
-
-def fill_and_submit_sales_form(sales_rep):
-    """Fills in the sales data and click the 'Submit' button"""
+def fetch_sahko_prices():
+    """Fetch the cheapest and most expensive prices for the day"""
     page = browser.page()
 
-    page.fill("#firstname", sales_rep["First Name"])
-    page.fill("#lastname", sales_rep["Last Name"])
-    page.select_option("#salestarget", str(sales_rep["Sales Target"]))
-    page.fill("#salesresult", str(sales_rep["Sales"]))
-    page.click("text=Submit")
+### Nämä eivät ole vielä oikein
+    halvin_hinta = float(page.locator(".price-min").inner_text().split()[0])
+    kallein_hinta = float(page.locator(".price-max").inner_text().split()[0])
 
-def download_excel_file():
-    """Downloads excel file from the given URL"""
-    http = HTTP()
-    http.download(url="https://robotsparebinindustries.com/SalesData.xlsx", overwrite=True)
+    return halvin_hinta, kallein_hinta
 
-def fill_form_with_excel_data():
-    """Read data from excel and fill in the sales form"""
+def save_to_excel(halvin_hinta, kallein_hinta):
+    """Save prices to Excel by date"""
     excel = Files()
-    excel.open_workbook("SalesData.xlsx")
-    worksheet = excel.read_worksheet_as_table("data", header=True)
-    excel.close_workbook()
+    today = datetime.now().strftime("%Y-%m-%d")
+    excel_filename = f"sahko_hinnat_{today}.xlsx"
 
-    for row in worksheet:
-        fill_and_submit_sales_form(row)
+### Testausta tälle
+    data = [
+        {"Päivämäärä": today, "Halvin hinta (snt/kWh)": halvin_hinta, "Kallein hinta (snt/kWh)": kallein_hinta}
+    ]
+    excel.create_workbook()
+    excel.append_rows_to_worksheet(data, header=True)
+    excel.save_workbook(excel_filename)
 
-def collect_results():
-    """Take a screenshot of the page"""
-    page = browser.page()
-    page.screenshot(path="output/sales_summary.png")
+    return excel_filename
 
-def export_as_pdf():
-    """Export the data to a pdf file"""
-    page = browser.page()
-    sales_result_html = page.locator("#sales-results").inner_html()
+def calculate_savings(halvin_hinta, kallein_hinta):
+    """Calculate savings with this device (3 kWh/h)."""
+    return (kallein_hinta - halvin_hinta) * 3
 
+def backup_excel(excel_filename):
+    """Make a backup of the excel-file"""
+    backup_folder = "varmuuskopiot"
+    os.makedirs(backup_folder, exist_ok=True)
+    shutil.copy(excel_filename, os.path.join(backup_folder, excel_filename))
+
+def convert_excel_to_pdf(excel_filename):
+    """Convert the excel to a pdf"""
     pdf = PDF()
-    pdf.html_to_pdf(sales_result_html, "output/sales_results.pdf")
+    pdf_filename = excel_filename.replace(".xlsx", ".pdf")
+    pdf.excel_to_pdf(excel_filename, pdf_filename)
+    return pdf_filename
 
-def log_out():
-    """Presses the 'Log out' button"""
-    page = browser.page()
-    page.click("text=Log out")
+def send_pdf_by_email(pdf_filename, saasto):
+    """Send the pdf to email addresses"""
+    email = Email()
+    email.smtp_server = "smtp.gmail.com"  # Muuta tarvittaessa
+    email.smtp_port = 587
+    email.smtp_username = "lähettäjän_email@gmail.com"
+    email.smtp_password = "salasana"  # Käytä turvallista tapaa tallentaa salasana
+    email.recipients = ["vastaanottaja1@example.com", "vastaanottaja2@example.com"]
+    email.subject = f"Sähkön hinnat ja säästöraportti - {datetime.now().strftime('%Y-%m-%d')}"
+    email.body = f"Liitteenä päivän sähkön hinnat. Säästö: {saasto:.2f} senttiä/kWh."
+    email.attach_file(pdf_filename)
+    email.send_message()
