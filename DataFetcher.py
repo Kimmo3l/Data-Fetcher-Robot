@@ -1,23 +1,34 @@
 from robocorp.tasks import task
 from robocorp import browser
-
 from RPA.HTTP import HTTP
 from RPA.Excel.Files import Files
 from RPA.PDF import PDF
+from RPA.Email import Email
+from RPA.Robocorp.WorkItems import WorkItems
+import os
+import shutil
+from datetime import datetime
 
 @task
-def robot_data_fetcher_python():
-    """Get the sahkodata and insert it to excel"""
-    browser.configure(
-        slowmo=100,
-    )
-    open_the_porssisahko_website()
-    log_in()
-    download_excel_file()
-    fill_form_with_excel_data()
-    collect_results()
-    export_as_pdf()
-    log_out()
+def robot_data_fetcher():
+    """Get the electricity prices and insert it to excel"""
+    browser.configure(slowmo=100)
+
+    try:
+        open_porssisahko_website()
+        halvin_hinta, kallein_hinta = fetch_sahko_prices()
+        excel_filename = save_to_excel(halvin_hinta, kallein_hinta)
+        saasto = calculate_savings(halvin_hinta, kallein_hinta)
+        backup_excel(excel_filename)
+        pdf_filename = convert_excel_to_pdf(excel_filename)
+        send_pdf_by_email(pdf_filename, saasto)
+        print(f"Robotin ajo valmis! Säästö: {saasto:.2f} senttiä/kWh.")
+
+    finally:
+        browser.close_browser()
+        excel = Files()
+        excel.close_workbook()
+
 
 def open_the_intranet_website():
     """Navigates to the given URL"""
