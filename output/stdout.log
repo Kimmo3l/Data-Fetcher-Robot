@@ -1,0 +1,12 @@
+
+Collecting tasks from: tasks.py
+========================= Running: [96mrobot_data_fetcher[0m ==========================
+Virhe rivillä 0: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("table").first.locator("tr").first.locator("td:nth-child(1)")
+
+Sulje Excel-tiedosto ennen ajoa!
+Ajo valmis! Halvin: 3.34 snt, Kallein: 16.57 snt. Säästö: 39.69 snt.
+[96mrobot_data_fetcher[0m status: PASS
+================================================================================
+Robocorp Log (html): c:\DF\Data-Fetcher-Robot\output\log.html

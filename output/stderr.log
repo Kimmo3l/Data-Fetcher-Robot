@@ -1,0 +1,3 @@
+C:\ProgramData\sema4ai\ht\f52e50d_c5e81ff_6133770e\lib\site-packages\robocorp\tasks\cli.py:40: Warning: Usage of the native system certificate stores can’t be enabled, ensure you have the `robocorp-truststore` dependency installed in the environment.
+  inject_truststore()
+2026-03-31 21:49:40,983 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)

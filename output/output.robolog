@@ -1,0 +1,1460 @@
+V 0.0.4
+T 2026-03-31T18:49:34.852+00:00
+ID 1|5c786fbe-2d32-11f1-843e-d88083607ae4
+I "sys.platform=win32"
+I "python=3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64 bit (AMD64)]"
+M a:"tasks.py"
+SR a|0.087
+M c:"Collect tasks"
+M d:"setup"
+M e:""
+P b:c|d|e|e|0
+ST b|0.087
+M f:"regular"
+M g:"\nCollecting tasks from: tasks.py\n"
+C f|g|0.089
+M h:"stderr"
+M i:"2026-03-31 21:49:40,983 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)\n"
+C h|i|6.131
+M j:"PASS"
+ET j|e|12.119
+M l:"robot_data_fetcher"
+M m:"tasks"
+M n:"c:\\DF\\Data-Fetcher-Robot\\tasks.py"
+M o:"Hakee s\u00e4hk\u00f6n hinnat, tallentaa Exceliin ja tekee raportin."
+P k:l|m|n|o|13
+ST k|12.119
+M p:"========================= "
+C f|p|12.119
+M q:"Running: "
+C f|q|12.119
+M r:"task_name"
+C r|l|12.119
+M s:" ==========================\n"
+C f|s|12.119
+M t:"METHOD"
+SE k|t|12.121
+M v:"configure"
+M w:"robocorp.browser"
+M x:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\browser\\__init__.py"
+P u:v|w|x|e|18
+SE u|t|12.122
+M y:"kwargs"
+M z:"dict"
+M A:"{'headless': True, 'slowmo': 100}"
+EA y|z|A
+EE t|j|12.129
+M C:"open_porssisahko_website"
+P B:C|m|n|e|47
+SE B|t|12.129
+M E:"goto"
+P D:E|w|x|e|212
+SE D|t|12.129
+M F:"url"
+M G:"str"
+M H:"'https://www.porssisahko.fi/'"
+EA F|G|H
+M I:"Playwright browsers path: C:\\Users\\elora\\AppData\\Local\\robocorp\\playwright)"
+M K:"playwright"
+M L:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\browser\\_context.py"
+P J:K|w|L|e|62
+L D|I|J|62|12.162
+P M:E|w|x|e|225
+M N:"Page"
+M O:"<Page url='https://porssisahko.fi/'>"
+R M|N|O|13.915
+EE t|j|13.916
+EE t|j|13.916
+M Q:"fetch_hourly_prices"
+P P:Q|m|n|e|50
+SE P|t|13.916
+M S:"page"
+P R:S|w|x|e|115
+SE R|t|13.916
+P T:S|w|x|e|134
+R T|N|O|13.917
+EE t|j|13.917
+P U:Q|m|n|e|52
+AS U|S|N|O|13.917
+P V:Q|m|n|e|53
+M W:"tunnit_hinnat"
+M X:"list"
+M Y:"[]"
+AS V|W|X|Y|13.917
+M 0:"Page.wait_for_selector"
+M 1:"playwright.sync_api._generated"
+M 2:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\sync_api\\_generated.py"
+P Z:0|1|2|e|8149
+SE Z|t|13.917
+M 3:"selector"
+M 4:"'table'"
+EA 3|G|4
+P 5:0|1|2|e|8216
+M 6:"ElementHandle"
+M 7:"<JSHandle preview=JSHandle@node>"
+R 5|6|7|13.99
+EE t|j|13.99
+M 9:"Page.locator"
+P 8:9|1|2|e|10189
+SE 8|t|13.992
+EA 3|G|4
+P aa:9|1|2|e|10238
+M ab:"Locator"
+M ac:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table'>"
+R aa|ab|ac|13.992
+EE t|j|13.992
+M ae:"Locator.first"
+P ad:ae|1|2|e|15361
+SE ad|t|13.993
+P af:ae|1|2|e|15370
+M ag:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0'>"
+R af|ab|ag|13.993
+EE t|j|13.993
+M ai:"Locator.locator"
+P ah:ai|1|2|e|16037
+SE ah|t|13.993
+M aj:"selector_or_locator"
+M ak:"'tr'"
+EA aj|G|ak
+P al:ai|1|2|e|16085
+M am:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr'>"
+R al|ab|am|13.994
+EE t|j|13.995
+M ao:"Locator.all"
+P an:ao|1|2|e|16822
+SE an|t|13.995
+P ap:ao|1|2|e|16849
+M aq:"[<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=0'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=1'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=2'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=3'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=4'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=5'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=6'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=7'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=8'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=9'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=10'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=11'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=12'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=13'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=14'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=15'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=16'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=17'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=18'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=19'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=20'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=21'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=22'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=23'>, <Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=24'>]"
+R ap|X|aq|14.008
+EE t|j|14.008
+P ar:Q|m|n|e|60
+M as:"rows"
+AS ar|as|X|aq|14.008
+M au:"for i in range(25)"
+P at:au|m|n|e|63
+M av:"FOR"
+SE at|av|14.008
+M ax:"Step: for i in range(25)"
+P aw:ax|m|n|e|63
+M ay:"FOR_STEP"
+SE aw|ay|14.009
+M az:"i"
+M aA:"int"
+M aB:"0"
+EA az|aA|aB
+SE ah|t|14.009
+M aC:"'td:nth-child(1)'"
+EA aj|G|aC
+M aD:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=0 >> td:nth-child(1)'>"
+R al|ab|aD|14.009
+EE t|j|14.009
+M aF:"Locator.inner_text"
+P aE:aF|1|2|e|17067
+SE aE|t|14.009
+M aG:"TimeoutError: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"table\").first.locator(\"tr\").first.locator(\"td:nth-child(1)\")\n"
+STB aG|44.017
+M aH:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\_impl\\_connection.py"
+M aI:"wrap_api_call"
+M aJ:"return await cb()"
+TBE aH|557|aI|aJ
+M aK:"self"
+M aL:"Connection"
+M aM:"<playwright._impl._connection.Connection object at 0x0000021616FCA500>"
+TBV aK|aL|aM
+M aN:"cb"
+M aO:"function"
+M aP:"<function Channel.send.<locals>.<lambda> at 0x000002161A38ED40>"
+TBV aN|aO|aP
+M aQ:"is_internal"
+M aR:"bool"
+M aS:"False"
+TBV aQ|aR|aS
+M aT:"title"
+M aU:"NoneType"
+M aV:"None"
+TBV aT|aU|aV
+M aW:"task"
+M aX:"Task"
+M aY:"<Task finished name='Task-10' coro=<Locator.inner_text() done, defined at C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\_impl\\_locator.py:474> exception=TimeoutError('Locator.inner_text: Timeout 30000ms exceeded.\\nCall log:\\n  - waiting for locator(\"table\").first.locator(\"tr\").first.locator(\"td:nth-child(1)\")\\n')>"
+TBV aW|aX|aY
+M aZ:"st"
+M a0:"[FrameInfo(frame=<frame at 0x0000021617FC2480, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\playwright\\\\_impl\\\\_sync_base.py', line 115, code _sync>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\playwright\\\\_impl\\\\_sync_base.py', lineno=108, function='_sync', code_context=None, index=None), FrameInfo(frame=<frame at 0x0000021618A32EC0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\playwright\\\\sync_api\\\\_generated.py', line 17086, code inner_text>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\playwright\\\\sync_api\\\\_generated.py', lineno=17087, function='inner_text', code_context=None, index=None), FrameInfo(frame=<frame at 0x0000021613C25580, file 'c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', line 66, code fetch_hourly_prices>, filename='c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', lineno=66, function='fetch_hourly_prices', code_context=None, index=None), FrameInfo(frame=<frame at 0x0000021613C28140, file 'c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', line 23, code robot_data_fetcher>, filename='c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', lineno=23, function='robot_data_fetcher', code_context=None, index=None), FrameInfo(frame=<frame at 0x000002161A948DD0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_task.py', line 89, code run>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_task.py', lineno=89, function='run', code_context=None, index=None), FrameInfo(frame=<frame at 0x000002161331E5C0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 440, code run>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', lineno=440, function='run', code_context=None, index=None), FrameInfo(frame=<frame at 0x0000021614108610, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', line 22, code _dispatch>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', lineno=22, function='_dispatch', code_context=None, index=None), FrameInfo(frame=<frame at 0x00000216130EB040, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', line 227, code process_args>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', lineno=227, function='process_args', code_context=None, index=None), FrameInfo(frame=<frame at 0x00000216136E89A0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\cli.py', line 78, code main>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\cli.py', lineno=78, function='main', code_context=None, index=None), FrameInfo(frame=<frame at 0x00000216130E8840, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\__main__.py', line 4, code <module>>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\__main__.py', lineno=4, function='<module>', code_context=None, index=None), FrameInfo(frame=<frame at 0x00000216124C9950, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', line 86, code _run_code>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', lineno=86, function='_run_code', code_context=None, index=None), FrameInfo(frame=<frame at 0x0000021612A9A040, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', line 196, code _run_module_as_main>, filename='C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', lineno=196, function='_run_module_as_main', code_context=None, index=None)]"
+TBV aZ|X|a0
+M a1:"parsed_st"
+M a2:"{'frames': [{'file': 'c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', 'line': 66, 'column': 0, 'function': 'fetch_hourly_prices'}, {'file': 'c:\\\\DF\\\\Data-Fetcher-Robot\\\\tasks.py', 'line': 23, 'column': 0, 'function': 'robot_data_fetcher'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_task.py', 'line': 89, 'column': 0, 'function': 'Task.run'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', 'line': 440, 'column': 0, 'function': 'run'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', 'line': 22, 'column': 0, 'function': '_ArgDispatcher._dispatch'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_argdispatch.py', 'line': 227, 'column': 0, 'function': '_ArgDispatcher.process_args'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\cli.py', 'line': 78, 'column': 0, 'function': 'main'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\__main__.py', 'line': 4, 'column': 0, 'function': '<module>'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', 'line': 86, 'column': 0, 'function': '_run_code'}, {'file': 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\runpy.py', 'line': 196, 'column': 0, 'function': '_run_module_as_main'}], 'apiName': 'Locator.inner_text', 'title': None}"
+TBV a1|z|a2
+M a3:"_inner_send"
+M a4:"result = next(iter(done)).result()"
+TBE aH|132|a3|a4
+M a5:"Channel"
+M a6:"<playwright._impl._connection.Channel object at 0x0000021616FC8610>"
+TBV aK|a5|a6
+M a7:"method"
+M a8:"'innerText'"
+TBV a7|G|a8
+M a9:"timeout_calculator"
+M ba:"<bound method Frame._timeout of <Frame name= url='https://porssisahko.fi/'>>"
+TBV a9|a7|ba
+M bb:"params"
+M bc:"{'selector': 'table >> nth=0 >> tr >> nth=0 >> td:nth-child(1)', 'strict': True, 'timeout': 30000}"
+TBV bb|z|bc
+M bd:"return_as_dict"
+TBV bd|aR|aS
+M be:"callback"
+M bf:"ProtocolCallback"
+M bg:"<playwright._impl._connection.ProtocolCallback object at 0x0000021615A9E800>"
+TBV be|bf|bg
+M bh:"done"
+M bi:"set"
+M bj:"{<Future finished exception=TimeoutError('Timeout 30000ms exceeded.\\nCall log:\\n  - waiting for locator(\"table\").first.locator(\"tr\").first.locator(\"td:nth-child(1)\")\\n')>}"
+TBV bh|bi|bj
+M bk:"_"
+M bl:"{<Future pending>}"
+TBV bk|bi|bl
+ETB 44.018
+M bm:"TimeoutError: Locator.inner_text: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"table\").first.locator(\"tr\").first.locator(\"td:nth-child(1)\")\n (this exception occurred during handling of the previous exception)"
+STB bm|44.018
+M bn:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\tasks\\_task.py"
+M bo:"run"
+M bp:"return self.method(*args, **kwargs)"
+TBE bn|89|bo|bp
+M bq:"Task(robot_data_fetcher, status: NOT_RUN)"
+TBV aK|aX|bq
+M br:"args"
+M bs:"tuple"
+M bt:"()"
+TBV br|bs|bt
+M bu:"{}"
+TBV y|z|bu
+M bv:"sig"
+M bw:"Signature"
+M bx:"<Signature ()>"
+TBV bv|bw|bx
+M by:"hinnat_lista = fetch_hourly_prices()"
+TBE n|23|l|by
+M bz:"tunti = rows[i].locator(\"td:nth-child(1)\").inner_text().strip()"
+TBE n|66|Q|bz
+TBV S|N|O
+TBV W|X|Y
+TBV as|X|aq
+TBV az|aA|aB
+M bA:"inner_text"
+M bB:"self._sync(self._impl_obj.inner_text(timeout=timeout))"
+TBE 2|17087|bA|bB
+TBV aK|ab|aD
+M bC:"timeout"
+TBV bC|aU|aV
+M bD:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\_impl\\_sync_base.py"
+M bE:"_sync"
+M bF:"return task.result()"
+TBE bD|115|bE|bF
+TBV aK|ab|aD
+M bG:"coro"
+M bH:"coroutine"
+M bI:"<coroutine object Locator.inner_text at 0x000002161A3D4510>"
+TBV bG|bH|bI
+M bJ:"__tracebackhide__"
+M bK:"True"
+TBV bJ|aR|bK
+TBV aW|aX|aY
+M bL:"g_self"
+M bM:"greenlet"
+M bN:"<greenlet.greenlet object at 0x00000216141AC7C0 (otid=0x0000021612BE7E40) current active started main>"
+TBV bL|bM|bN
+M bO:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\_impl\\_locator.py"
+M bP:"return await self._frame.inner_text("
+TBE bO|476|bA|bP
+TBV aK|ab|aD
+TBV bC|aU|aV
+TBV bb|z|bu
+M bQ:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\playwright\\_impl\\_frame.py"
+M bR:"return await self._channel.send("
+TBE bQ|712|bA|bR
+M bS:"Frame"
+M bT:"<Frame name= url='https://porssisahko.fi/'>"
+TBV aK|bS|bT
+M bU:"'table >> nth=0 >> tr >> nth=0 >> td:nth-child(1)'"
+TBV 3|G|bU
+M bV:"strict"
+TBV bV|aR|bK
+TBV bC|aU|aV
+M bW:"send"
+M bX:"return await self._connection.wrap_api_call("
+TBE aH|69|bW|bX
+TBV aQ|aR|aS
+TBV aT|aU|aV
+TBV a7|G|a8
+TBV bb|z|bc
+TBV aK|a5|a6
+TBV a9|a7|ba
+M bY:"raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None"
+TBE aH|559|aI|bY
+TBV aK|aL|aM
+TBV aN|aO|aP
+TBV aQ|aR|aS
+TBV aT|aU|aV
+TBV aW|aX|aY
+TBV aZ|X|a0
+TBV a1|z|a2
+ETB 44.02
+M bZ:"ERROR"
+EE t|bZ|44.023
+M b0:"stdout"
+M b1:"Virhe rivill\u00e4 0: Locator.inner_text: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"table\").first.locator(\"tr\").first.locator(\"td:nth-child(1)\")\n"
+C b0|b1|44.024
+M b2:"\n"
+C b0|b2|44.024
+P b3:Q|m|n|e|78
+M b4:"CONTINUE"
+SE b3|b4|44.024
+EE ay|j|44.024
+SE aw|ay|44.024
+M b5:"1"
+EA az|aA|b5
+SE ah|t|44.024
+EA aj|G|aC
+M b6:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=1 >> td:nth-child(1)'>"
+R al|ab|b6|44.024
+EE t|j|44.024
+SE aE|t|44.024
+P b7:aF|1|2|e|17086
+M b8:"'00:00\u201301:00'"
+R b7|G|b8|44.033
+EE t|j|44.033
+P b9:Q|m|n|e|66
+M ca:"tunti"
+AS b9|ca|G|b8|44.033
+SE ah|t|44.033
+M cc:"'td:nth-child(2)'"
+EA aj|G|cc
+M cd:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=1 >> td:nth-child(2)'>"
+R al|ab|cd|44.034
+EE t|j|44.034
+SE aE|t|44.034
+M ce:"'3,81'"
+R b7|G|ce|44.039
+EE t|j|44.04
+P cf:Q|m|n|e|67
+M cg:"hinta_teksti"
+AS cf|cg|G|ce|44.04
+P ch:Q|m|n|e|70
+M ci:"hinta"
+M cj:"float"
+M ck:"3.81"
+AS ch|ci|cj|ck|44.04
+EE ay|j|44.04
+SE aw|ay|44.04
+M cl:"2"
+EA az|aA|cl
+SE ah|t|44.04
+EA aj|G|aC
+M cm:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=2 >> td:nth-child(1)'>"
+R al|ab|cm|44.04
+EE t|j|44.04
+SE aE|t|44.04
+M cn:"'01:00\u201302:00'"
+R b7|G|cn|44.047
+EE t|j|44.047
+AS b9|ca|G|cn|44.047
+SE ah|t|44.047
+EA aj|G|cc
+M co:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=2 >> td:nth-child(2)'>"
+R al|ab|co|44.048
+EE t|j|44.048
+SE aE|t|44.048
+M cp:"'3,34'"
+R b7|G|cp|44.054
+EE t|j|44.054
+AS cf|cg|G|cp|44.054
+M cq:"3.34"
+AS ch|ci|cj|cq|44.055
+EE ay|j|44.055
+SE aw|ay|44.055
+M cr:"3"
+EA az|aA|cr
+SE ah|t|44.055
+EA aj|G|aC
+M cs:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=3 >> td:nth-child(1)'>"
+R al|ab|cs|44.055
+EE t|j|44.055
+SE aE|t|44.056
+M ct:"'02:00\u201303:00'"
+R b7|G|ct|44.062
+EE t|j|44.062
+AS b9|ca|G|ct|44.062
+SE ah|t|44.062
+EA aj|G|cc
+M cu:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=3 >> td:nth-child(2)'>"
+R al|ab|cu|44.062
+EE t|j|44.062
+SE aE|t|44.062
+M cv:"'3,94'"
+R b7|G|cv|44.069
+EE t|j|44.069
+AS cf|cg|G|cv|44.069
+M cw:"3.94"
+AS ch|ci|cj|cw|44.069
+EE ay|j|44.069
+SE aw|ay|44.069
+M cx:"4"
+EA az|aA|cx
+SE ah|t|44.069
+EA aj|G|aC
+M cy:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=4 >> td:nth-child(1)'>"
+R al|ab|cy|44.069
+EE t|j|44.069
+SE aE|t|44.069
+M cz:"'03:00\u201304:00'"
+R b7|G|cz|44.076
+EE t|j|44.077
+AS b9|ca|G|cz|44.077
+SE ah|t|44.077
+EA aj|G|cc
+M cA:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=4 >> td:nth-child(2)'>"
+R al|ab|cA|44.077
+EE t|j|44.077
+SE aE|t|44.077
+M cB:"'5,55'"
+R b7|G|cB|44.084
+EE t|j|44.084
+AS cf|cg|G|cB|44.084
+M cC:"5.55"
+AS ch|ci|cj|cC|44.084
+EE ay|j|44.084
+SE aw|ay|44.084
+M cD:"5"
+EA az|aA|cD
+SE ah|t|44.085
+EA aj|G|aC
+M cE:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=5 >> td:nth-child(1)'>"
+R al|ab|cE|44.085
+EE t|j|44.085
+SE aE|t|44.085
+M cF:"'04:00\u201305:00'"
+R b7|G|cF|44.092
+EE t|j|44.092
+AS b9|ca|G|cF|44.092
+SE ah|t|44.092
+EA aj|G|cc
+M cG:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=5 >> td:nth-child(2)'>"
+R al|ab|cG|44.092
+EE t|j|44.092
+SE aE|t|44.092
+M cH:"'6,26'"
+R b7|G|cH|44.096
+EE t|j|44.097
+AS cf|cg|G|cH|44.097
+M cI:"6.26"
+AS ch|ci|cj|cI|44.097
+EE ay|j|44.097
+SE aw|ay|44.097
+M cJ:"6"
+EA az|aA|cJ
+SE ah|t|44.097
+EA aj|G|aC
+M cK:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=6 >> td:nth-child(1)'>"
+R al|ab|cK|44.097
+EE t|j|44.097
+SE aE|t|44.098
+M cL:"'05:00\u201306:00'"
+R b7|G|cL|44.104
+EE t|j|44.104
+AS b9|ca|G|cL|44.104
+SE ah|t|44.104
+EA aj|G|cc
+M cM:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=6 >> td:nth-child(2)'>"
+R al|ab|cM|44.104
+EE t|j|44.104
+SE aE|t|44.104
+M cN:"'6,48'"
+R b7|G|cN|44.109
+EE t|j|44.109
+AS cf|cg|G|cN|44.109
+M cO:"6.48"
+AS ch|ci|cj|cO|44.109
+EE ay|j|44.109
+SE aw|ay|44.109
+M cP:"7"
+EA az|aA|cP
+SE ah|t|44.109
+EA aj|G|aC
+M cQ:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=7 >> td:nth-child(1)'>"
+R al|ab|cQ|44.109
+EE t|j|44.109
+SE aE|t|44.109
+M cR:"'06:00\u201307:00'"
+R b7|G|cR|44.116
+EE t|j|44.117
+AS b9|ca|G|cR|44.117
+SE ah|t|44.117
+EA aj|G|cc
+M cS:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=7 >> td:nth-child(2)'>"
+R al|ab|cS|44.117
+EE t|j|44.117
+SE aE|t|44.117
+M cT:"'12,28'"
+R b7|G|cT|44.123
+EE t|j|44.123
+AS cf|cg|G|cT|44.123
+M cU:"12.28"
+AS ch|ci|cj|cU|44.123
+EE ay|j|44.123
+SE aw|ay|44.123
+M cV:"8"
+EA az|aA|cV
+SE ah|t|44.123
+EA aj|G|aC
+M cW:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=8 >> td:nth-child(1)'>"
+R al|ab|cW|44.124
+EE t|j|44.124
+SE aE|t|44.125
+M cX:"'07:00\u201308:00'"
+R b7|G|cX|44.131
+EE t|j|44.131
+AS b9|ca|G|cX|44.131
+SE ah|t|44.131
+EA aj|G|cc
+M cY:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=8 >> td:nth-child(2)'>"
+R al|ab|cY|44.131
+EE t|j|44.131
+SE aE|t|44.132
+M cZ:"'14,44'"
+R b7|G|cZ|44.137
+EE t|j|44.137
+AS cf|cg|G|cZ|44.137
+M c0:"14.44"
+AS ch|ci|cj|c0|44.137
+EE ay|j|44.137
+SE aw|ay|44.137
+M c1:"9"
+EA az|aA|c1
+SE ah|t|44.137
+EA aj|G|aC
+M c2:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=9 >> td:nth-child(1)'>"
+R al|ab|c2|44.137
+EE t|j|44.137
+SE aE|t|44.137
+M c3:"'08:00\u201309:00'"
+R b7|G|c3|44.144
+EE t|j|44.144
+AS b9|ca|G|c3|44.145
+SE ah|t|44.145
+EA aj|G|cc
+M c4:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=9 >> td:nth-child(2)'>"
+R al|ab|c4|44.145
+EE t|j|44.145
+SE aE|t|44.145
+M c5:"'15,39'"
+R b7|G|c5|44.153
+EE t|j|44.153
+AS cf|cg|G|c5|44.153
+M c6:"15.39"
+AS ch|ci|cj|c6|44.153
+EE ay|j|44.153
+SE aw|ay|44.153
+M c7:"10"
+EA az|aA|c7
+SE ah|t|44.153
+EA aj|G|aC
+M c8:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=10 >> td:nth-child(1)'>"
+R al|ab|c8|44.153
+EE t|j|44.154
+SE aE|t|44.154
+M c9:"'09:00\u201310:00'"
+R b7|G|c9|44.161
+EE t|j|44.161
+AS b9|ca|G|c9|44.161
+SE ah|t|44.161
+EA aj|G|cc
+M da:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=10 >> td:nth-child(2)'>"
+R al|ab|da|44.161
+EE t|j|44.161
+SE aE|t|44.161
+M db:"'15,63'"
+R b7|G|db|44.167
+EE t|j|44.167
+AS cf|cg|G|db|44.167
+M dc:"15.63"
+AS ch|ci|cj|dc|44.167
+EE ay|j|44.167
+SE aw|ay|44.167
+M dd:"11"
+EA az|aA|dd
+SE ah|t|44.167
+EA aj|G|aC
+M de:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=11 >> td:nth-child(1)'>"
+R al|ab|de|44.168
+EE t|j|44.168
+SE aE|t|44.168
+M df:"'10:00\u201311:00'"
+R b7|G|df|44.173
+EE t|j|44.174
+AS b9|ca|G|df|44.174
+SE ah|t|44.174
+EA aj|G|cc
+M dg:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=11 >> td:nth-child(2)'>"
+R al|ab|dg|44.174
+EE t|j|44.174
+SE aE|t|44.174
+M dh:"'15,17'"
+R b7|G|dh|44.18
+EE t|j|44.18
+AS cf|cg|G|dh|44.18
+M di:"15.17"
+AS ch|ci|cj|di|44.18
+EE ay|j|44.18
+SE aw|ay|44.181
+M dj:"12"
+EA az|aA|dj
+SE ah|t|44.181
+EA aj|G|aC
+M dk:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=12 >> td:nth-child(1)'>"
+R al|ab|dk|44.181
+EE t|j|44.182
+SE aE|t|44.182
+M dl:"'11:00\u201312:00'"
+R b7|G|dl|44.187
+EE t|j|44.187
+AS b9|ca|G|dl|44.189
+SE ah|t|44.189
+EA aj|G|cc
+M dm:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=12 >> td:nth-child(2)'>"
+R al|ab|dm|44.189
+EE t|j|44.189
+SE aE|t|44.189
+M dn:"'12,97'"
+R b7|G|dn|44.196
+EE t|j|44.196
+AS cf|cg|G|dn|44.196
+M do:"12.97"
+AS ch|ci|cj|do|44.196
+EE ay|j|44.196
+SE aw|ay|44.196
+M dp:"13"
+EA az|aA|dp
+SE ah|t|44.196
+EA aj|G|aC
+M dq:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=13 >> td:nth-child(1)'>"
+R al|ab|dq|44.196
+EE t|j|44.196
+SE aE|t|44.196
+M dr:"'12:00\u201313:00'"
+R b7|G|dr|44.204
+EE t|j|44.204
+AS b9|ca|G|dr|44.204
+SE ah|t|44.204
+EA aj|G|cc
+M ds:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=13 >> td:nth-child(2)'>"
+R al|ab|ds|44.204
+EE t|j|44.204
+SE aE|t|44.204
+M dt:"'10,39'"
+R b7|G|dt|44.209
+EE t|j|44.209
+AS cf|cg|G|dt|44.209
+M du:"10.39"
+AS ch|ci|cj|du|44.209
+EE ay|j|44.209
+SE aw|ay|44.209
+M dv:"14"
+EA az|aA|dv
+SE ah|t|44.209
+EA aj|G|aC
+M dw:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=14 >> td:nth-child(1)'>"
+R al|ab|dw|44.209
+EE t|j|44.209
+SE aE|t|44.209
+M dx:"'13:00\u201314:00'"
+R b7|G|dx|44.217
+EE t|j|44.217
+AS b9|ca|G|dx|44.217
+SE ah|t|44.217
+EA aj|G|cc
+M dy:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=14 >> td:nth-child(2)'>"
+R al|ab|dy|44.218
+EE t|j|44.218
+SE aE|t|44.218
+M dz:"'9,35'"
+R b7|G|dz|44.225
+EE t|j|44.225
+AS cf|cg|G|dz|44.225
+M dA:"9.35"
+AS ch|ci|cj|dA|44.225
+EE ay|j|44.225
+SE aw|ay|44.225
+M dB:"15"
+EA az|aA|dB
+SE ah|t|44.226
+EA aj|G|aC
+M dC:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=15 >> td:nth-child(1)'>"
+R al|ab|dC|44.226
+EE t|j|44.226
+SE aE|t|44.226
+M dD:"'14:00\u201315:00'"
+R b7|G|dD|44.232
+EE t|j|44.232
+AS b9|ca|G|dD|44.232
+SE ah|t|44.232
+EA aj|G|cc
+M dE:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=15 >> td:nth-child(2)'>"
+R al|ab|dE|44.232
+EE t|j|44.232
+SE aE|t|44.232
+M dF:"'6,94'"
+R b7|G|dF|44.238
+EE t|j|44.238
+AS cf|cg|G|dF|44.238
+M dG:"6.94"
+AS ch|ci|cj|dG|44.238
+EE ay|j|44.238
+SE aw|ay|44.239
+M dH:"16"
+EA az|aA|dH
+SE ah|t|44.239
+EA aj|G|aC
+M dI:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=16 >> td:nth-child(1)'>"
+R al|ab|dI|44.239
+EE t|j|44.239
+SE aE|t|44.239
+M dJ:"'15:00\u201316:00'"
+R b7|G|dJ|44.246
+EE t|j|44.246
+AS b9|ca|G|dJ|44.246
+SE ah|t|44.246
+EA aj|G|cc
+M dK:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=16 >> td:nth-child(2)'>"
+R al|ab|dK|44.246
+EE t|j|44.246
+SE aE|t|44.246
+M dL:"'6,75'"
+R b7|G|dL|44.252
+EE t|j|44.252
+AS cf|cg|G|dL|44.252
+M dM:"6.75"
+AS ch|ci|cj|dM|44.253
+EE ay|j|44.253
+SE aw|ay|44.253
+M dN:"17"
+EA az|aA|dN
+SE ah|t|44.253
+EA aj|G|aC
+M dO:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=17 >> td:nth-child(1)'>"
+R al|ab|dO|44.253
+EE t|j|44.253
+SE aE|t|44.253
+M dP:"'16:00\u201317:00'"
+R b7|G|dP|44.26
+EE t|j|44.26
+AS b9|ca|G|dP|44.26
+SE ah|t|44.26
+EA aj|G|cc
+M dQ:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=17 >> td:nth-child(2)'>"
+R al|ab|dQ|44.261
+EE t|j|44.261
+SE aE|t|44.261
+M dR:"'7,65'"
+R b7|G|dR|44.266
+EE t|j|44.267
+AS cf|cg|G|dR|44.267
+M dS:"7.65"
+AS ch|ci|cj|dS|44.267
+EE ay|j|44.267
+SE aw|ay|44.267
+M dT:"18"
+EA az|aA|dT
+SE ah|t|44.267
+EA aj|G|aC
+M dU:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=18 >> td:nth-child(1)'>"
+R al|ab|dU|44.267
+EE t|j|44.267
+SE aE|t|44.267
+M dV:"'17:00\u201318:00'"
+R b7|G|dV|44.272
+EE t|j|44.272
+AS b9|ca|G|dV|44.274
+SE ah|t|44.274
+EA aj|G|cc
+M dW:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=18 >> td:nth-child(2)'>"
+R al|ab|dW|44.274
+EE t|j|44.274
+SE aE|t|44.274
+M dX:"'9,83'"
+R b7|G|dX|44.279
+EE t|j|44.279
+AS cf|cg|G|dX|44.279
+M dY:"9.83"
+AS ch|ci|cj|dY|44.279
+EE ay|j|44.279
+SE aw|ay|44.279
+M dZ:"19"
+EA az|aA|dZ
+SE ah|t|44.281
+EA aj|G|aC
+M d0:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=19 >> td:nth-child(1)'>"
+R al|ab|d0|44.281
+EE t|j|44.281
+SE aE|t|44.281
+M d1:"'18:00\u201319:00'"
+R b7|G|d1|44.287
+EE t|j|44.287
+AS b9|ca|G|d1|44.287
+SE ah|t|44.287
+EA aj|G|cc
+M d2:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=19 >> td:nth-child(2)'>"
+R al|ab|d2|44.287
+EE t|j|44.287
+SE aE|t|44.287
+M d3:"'12,25'"
+R b7|G|d3|44.292
+EE t|j|44.293
+AS cf|cg|G|d3|44.293
+M d4:"12.25"
+AS ch|ci|cj|d4|44.293
+EE ay|j|44.293
+SE aw|ay|44.293
+M d5:"20"
+EA az|aA|d5
+SE ah|t|44.293
+EA aj|G|aC
+M d6:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=20 >> td:nth-child(1)'>"
+R al|ab|d6|44.294
+EE t|j|44.294
+SE aE|t|44.294
+M d7:"'19:00\u201320:00'"
+R b7|G|d7|44.302
+EE t|j|44.302
+AS b9|ca|G|d7|44.302
+SE ah|t|44.302
+EA aj|G|cc
+M d8:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=20 >> td:nth-child(2)'>"
+R al|ab|d8|44.302
+EE t|j|44.302
+SE aE|t|44.302
+M d9:"'15,38'"
+R b7|G|d9|44.308
+EE t|j|44.308
+AS cf|cg|G|d9|44.308
+M ea:"15.38"
+AS ch|ci|cj|ea|44.308
+EE ay|j|44.308
+SE aw|ay|44.308
+M eb:"21"
+EA az|aA|eb
+SE ah|t|44.308
+EA aj|G|aC
+M ec:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=21 >> td:nth-child(1)'>"
+R al|ab|ec|44.308
+EE t|j|44.308
+SE aE|t|44.309
+M ed:"'20:00\u201321:00'"
+R b7|G|ed|44.316
+EE t|j|44.316
+AS b9|ca|G|ed|44.316
+SE ah|t|44.316
+EA aj|G|cc
+M ee:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=21 >> td:nth-child(2)'>"
+R al|ab|ee|44.316
+EE t|j|44.316
+SE aE|t|44.316
+M ef:"'16,57'"
+R b7|G|ef|44.323
+EE t|j|44.324
+AS cf|cg|G|ef|44.324
+M eg:"16.57"
+AS ch|ci|cj|eg|44.324
+EE ay|j|44.324
+SE aw|ay|44.324
+M eh:"22"
+EA az|aA|eh
+SE ah|t|44.324
+EA aj|G|aC
+M ei:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=22 >> td:nth-child(1)'>"
+R al|ab|ei|44.324
+EE t|j|44.324
+SE aE|t|44.325
+M ej:"'21:00\u201322:00'"
+R b7|G|ej|44.332
+EE t|j|44.332
+AS b9|ca|G|ej|44.332
+SE ah|t|44.332
+EA aj|G|cc
+M ek:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=22 >> td:nth-child(2)'>"
+R al|ab|ek|44.332
+EE t|j|44.332
+SE aE|t|44.332
+M el:"'15,78'"
+R b7|G|el|44.339
+EE t|j|44.339
+AS cf|cg|G|el|44.339
+M em:"15.78"
+AS ch|ci|cj|em|44.339
+EE ay|j|44.339
+SE aw|ay|44.339
+M en:"23"
+EA az|aA|en
+SE ah|t|44.339
+EA aj|G|aC
+M eo:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=23 >> td:nth-child(1)'>"
+R al|ab|eo|44.34
+EE t|j|44.34
+SE aE|t|44.34
+M ep:"'22:00\u201323:00'"
+R b7|G|ep|44.346
+EE t|j|44.347
+AS b9|ca|G|ep|44.347
+SE ah|t|44.347
+EA aj|G|cc
+M eq:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=23 >> td:nth-child(2)'>"
+R al|ab|eq|44.347
+EE t|j|44.347
+SE aE|t|44.347
+M er:"'13,64'"
+R b7|G|er|44.354
+EE t|j|44.354
+AS cf|cg|G|er|44.354
+M es:"13.64"
+AS ch|ci|cj|es|44.354
+EE ay|j|44.354
+SE aw|ay|44.355
+M et:"24"
+EA az|aA|et
+SE ah|t|44.355
+EA aj|G|aC
+M eu:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=24 >> td:nth-child(1)'>"
+R al|ab|eu|44.355
+EE t|j|44.355
+SE aE|t|44.355
+M ev:"'23:00\u201300:00'"
+R b7|G|ev|44.361
+EE t|j|44.362
+AS b9|ca|G|ev|44.362
+SE ah|t|44.362
+EA aj|G|cc
+M ew:"<Locator frame=<Frame name= url='https://porssisahko.fi/'> selector='table >> nth=0 >> tr >> nth=24 >> td:nth-child(2)'>"
+R al|ab|ew|44.362
+EE t|j|44.362
+SE aE|t|44.362
+M ex:"'8,95'"
+R b7|G|ex|44.368
+EE t|j|44.368
+AS cf|cg|G|ex|44.369
+M ey:"8.95"
+AS ch|ci|cj|ey|44.369
+EE ay|j|44.369
+EE av|j|44.369
+P ez:Q|m|n|e|80
+M eA:"[{'Tunti': '00:00\u201301:00', 'Hinta': 3.81}, {'Tunti': '01:00\u201302:00', 'Hinta': 3.34}, {'Tunti': '02:00\u201303:00', 'Hinta': 3.94}, {'Tunti': '03:00\u201304:00', 'Hinta': 5.55}, {'Tunti': '04:00\u201305:00', 'Hinta': 6.26}, {'Tunti': '05:00\u201306:00', 'Hinta': 6.48}, {'Tunti': '06:00\u201307:00', 'Hinta': 12.28}, {'Tunti': '07:00\u201308:00', 'Hinta': 14.44}, {'Tunti': '08:00\u201309:00', 'Hinta': 15.39}, {'Tunti': '09:00\u201310:00', 'Hinta': 15.63}, {'Tunti': '10:00\u201311:00', 'Hinta': 15.17}, {'Tunti': '11:00\u201312:00', 'Hinta': 12.97}, {'Tunti': '12:00\u201313:00', 'Hinta': 10.39}, {'Tunti': '13:00\u201314:00', 'Hinta': 9.35}, {'Tunti': '14:00\u201315:00', 'Hinta': 6.94}, {'Tunti': '15:00\u201316:00', 'Hinta': 6.75}, {'Tunti': '16:00\u201317:00', 'Hinta': 7.65}, {'Tunti': '17:00\u201318:00', 'Hinta': 9.83}, {'Tunti': '18:00\u201319:00', 'Hinta': 12.25}, {'Tunti': '19:00\u201320:00', 'Hinta': 15.38}, {'Tunti': '20:00\u201321:00', 'Hinta': 16.57}, {'Tunti': '21:00\u201322:00', 'Hinta': 15.78}, {'Tunti': '22:00\u201323:00', 'Hinta': 13.64}, {'Tunti': '23:00\u201300:00', 'Hinta': 8.95}]"
+R ez|X|eA|44.369
+EE t|j|44.369
+P eB:l|m|n|e|23
+M eC:"hinnat_lista"
+AS eB|eC|X|eA|44.369
+M eE:"save_to_excel"
+P eD:eE|m|n|e|82
+SE eD|t|44.369
+M eF:"data_list"
+EA eF|X|eA
+M eG:"filename"
+M eH:"'sahko_hinnat.xlsx'"
+EA eG|G|eH
+M eJ:"Files.__init__"
+M eK:"RPA.Excel.Files"
+M eL:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\RPA\\Excel\\Files.py"
+P eI:eJ|eK|eL|e|180
+SE eI|t|44.371
+EE t|j|44.371
+P eM:eE|m|n|e|83
+M eN:"excel"
+M eO:"Files"
+M eP:"<RPA.Excel.Files.Files object at 0x0000021616FCBD60>"
+AS eM|eN|eO|eP|44.371
+M eR:"if os.path.exists(filename)"
+P eQ:eR|m|n|e|86
+M eS:"IF_SCOPE"
+SE eQ|eS|44.372
+EA eG|G|eH
+M eT:"Sulje Excel-tiedosto ennen ajoa!"
+C b0|eT|44.372
+C b0|b2|44.373
+P eU:eE|m|n|e|91
+R eU|aU|aV|44.373
+EE eS|j|44.373
+EE t|j|44.373
+M eW:"calculate_prices_and_savings"
+P eV:eW|m|n|e|104
+SE eV|t|44.373
+EA eG|G|eH
+SE eI|t|44.374
+EE t|j|44.374
+P eX:eW|m|n|e|105
+M eY:"<RPA.Excel.Files.Files object at 0x0000021616FC8160>"
+AS eX|eN|eO|eY|44.374
+M e0:"Files.open_workbook"
+P eZ:e0|eK|eL|e|310
+SE eZ|t|44.374
+M e1:"path"
+EA e1|G|eH
+M e2:"data_only"
+EA e2|aR|aS
+M e3:"read_only"
+EA e3|aR|aS
+P e4:e0|eK|eL|e|357
+M e5:"XlsxWorkbook"
+M e6:"<RPA.Excel.Files.XlsxWorkbook object at 0x0000021615A9E3E0>"
+R e4|e5|e6|44.386
+EE t|j|44.386
+M e8:"Files.read_worksheet_as_table"
+P e7:e8|eK|eL|e|667
+SE e7|t|44.386
+M e9:"name"
+EA e9|aU|aV
+M fa:"header"
+EA fa|aR|bK
+M fb:"trim"
+EA fb|aR|bK
+M fc:"start"
+EA fc|aU|aV
+P fd:e8|eK|eL|e|713
+M fe:"Table"
+M ff:"Table(columns=['P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4', 'Tunti', 'Hinta'], rows=24)"
+R fd|fe|ff|44.389
+EE t|j|44.389
+P fg:eW|m|n|e|107
+M fh:"table"
+AS fg|fh|fe|ff|44.389
+M fj:"Files.close_workbook"
+P fi:fj|eK|eL|e|359
+SE fi|t|44.389
+EE t|j|44.389
+P fk:eW|m|n|e|110
+M fl:"today"
+M fm:"'2026-03-31'"
+AS fk|fl|G|fm|44.39
+M fo:"Table.iter_dicts"
+M fp:"RPA.Tables"
+M fq:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\RPA\\Tables.py"
+P fn:fo|fp|fq|e|827
+M fr:"UNTRACKED_GENERATOR"
+SE fn|fr|44.39
+M fs:"with_index"
+EA fs|aR|aS
+EE fr|j|44.392
+P ft:eW|m|n|e|112
+M fu:"today_rows"
+M fv:"[{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '00:00\u201301:00', 'Hinta': 3.81}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '01:00\u201302:00', 'Hinta': 3.34}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '02:00\u201303:00', 'Hinta': 3.94}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '03:00\u201304:00', 'Hinta': 5.55}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '04:00\u201305:00', 'Hinta': 6.26}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '05:00\u201306:00', 'Hinta': 6.48}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '06:00\u201307:00', 'Hinta': 12.28}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '07:00\u201308:00', 'Hinta': 14.44}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '08:00\u201309:00', 'Hinta': 15.39}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '09:00\u201310:00', 'Hinta': 15.63}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '10:00\u201311:00', 'Hinta': 15.17}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '11:00\u201312:00', 'Hinta': 12.97}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '12:00\u201313:00', 'Hinta': 10.39}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '13:00\u201314:00', 'Hinta': 9.35}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '14:00\u201315:00', 'Hinta': 6.94}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '15:00\u201316:00', 'Hinta': 6.75}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '16:00\u201317:00', 'Hinta': 7.65}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '17:00\u201318:00', 'Hinta': 9.83}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '18:00\u201319:00', 'Hinta': 12.25}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '19:00\u201320:00', 'Hinta': 15.38}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '20:00\u201321:00', 'Hinta': 16.57}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '21:00\u201322:00', 'Hinta': 15.78}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '22:00\u201323:00', 'Hinta': 13.64}, {'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '23:00\u201300:00', 'Hinta': 8.95}]"
+AS ft|fu|X|fv|44.392
+P fw:eW|m|n|e|114
+M fx:"hinnat"
+M fy:"[3.81, 3.34, 3.94, 5.55, 6.26, 6.48, 12.28, 14.44, 15.39, 15.63, 15.17, 12.97, 10.39, 9.35, 6.94, 6.75, 7.65, 9.83, 12.25, 15.38, 16.57, 15.78, 13.64, 8.95]"
+AS fw|fx|X|fy|44.392
+P fz:eW|m|n|e|115
+M fA:"halvin"
+AS fz|fA|cj|cq|44.392
+P fB:eW|m|n|e|116
+M fC:"kallein"
+AS fB|fC|cj|eg|44.392
+P fD:eW|m|n|e|118
+M fE:"saasto"
+M fF:"39.69"
+AS fD|fE|cj|fF|44.392
+P fG:eW|m|n|e|120
+M fH:"(3.34, 16.57, 39.69)"
+R fG|bs|fH|44.392
+EE t|j|44.392
+M fJ:"backup_excel"
+P fI:fJ|m|n|e|122
+SE fI|t|44.392
+EA eG|G|eH
+EE t|j|44.396
+M fL:"convert_excel_to_pdf"
+P fK:fL|m|n|e|126
+SE fK|t|44.396
+M fM:"excel_filename"
+EA fM|G|eH
+M fO:"PDF.__init__"
+M fP:"RPA.PDF"
+M fQ:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\RPA\\PDF\\__init__.py"
+P fN:fO|fP|fQ|e|101
+SE fN|t|44.396
+EE t|j|44.406
+P fR:fL|m|n|e|127
+M fS:"pdf"
+M fT:"PDF"
+M fU:"<RPA.PDF.PDF object at 0x0000021615A9CE50>"
+AS fR|fS|fT|fU|44.406
+P fV:fL|m|n|e|128
+M fW:"pdf_name"
+M fX:"'sahko_hinnat.pdf'"
+AS fV|fW|G|fX|44.406
+SE eI|t|44.407
+EE t|j|44.407
+P fY:fL|m|n|e|131
+M fZ:"<RPA.Excel.Files.Files object at 0x0000021615A9E890>"
+AS fY|eN|eO|fZ|44.407
+SE eZ|t|44.407
+EA e1|G|eH
+EA e2|aR|aS
+EA e3|aR|aS
+M f0:"<RPA.Excel.Files.XlsxWorkbook object at 0x0000021615A9FF40>"
+R e4|e5|f0|44.418
+EE t|j|44.418
+SE e7|t|44.418
+EA e9|aU|aV
+EA fa|aR|bK
+EA fb|aR|bK
+EA fc|aU|aV
+R fd|fe|ff|44.419
+EE t|j|44.419
+P f1:fL|m|n|e|133
+M f2:"data"
+AS f1|f2|fe|ff|44.419
+SE fi|t|44.419
+EE t|j|44.419
+P f3:fL|m|n|e|137
+M f4:"html_content"
+M f5:"\"<h1>S\u00e4hk\u00f6n hintaraportti</h1><table border='1'><tr><th>Aika</th><th>Hinta (snt)</th></tr>\""
+AS f3|f4|G|f5|44.419
+M f7:"for row in data"
+P f6:f7|m|n|e|138
+SE f6|av|44.419
+SE fn|fr|44.421
+EA fs|aR|aS
+M f9:"Step: for row in data"
+P f8:f9|m|n|e|138
+SE f8|ay|44.421
+M ga:"row"
+M gb:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '00:00\u201301:00', 'Hinta': 3.81}"
+EA ga|z|gb
+EE ay|j|44.421
+SE f8|ay|44.421
+M gc:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '01:00\u201302:00', 'Hinta': 3.34}"
+EA ga|z|gc
+EE ay|j|44.421
+SE f8|ay|44.421
+M gd:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '02:00\u201303:00', 'Hinta': 3.94}"
+EA ga|z|gd
+EE ay|j|44.422
+SE f8|ay|44.422
+M ge:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '03:00\u201304:00', 'Hinta': 5.55}"
+EA ga|z|ge
+EE ay|j|44.422
+SE f8|ay|44.422
+M gf:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '04:00\u201305:00', 'Hinta': 6.26}"
+EA ga|z|gf
+EE ay|j|44.422
+SE f8|ay|44.422
+M gg:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '05:00\u201306:00', 'Hinta': 6.48}"
+EA ga|z|gg
+EE ay|j|44.422
+SE f8|ay|44.423
+M gh:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '06:00\u201307:00', 'Hinta': 12.28}"
+EA ga|z|gh
+EE ay|j|44.423
+SE f8|ay|44.423
+M gi:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '07:00\u201308:00', 'Hinta': 14.44}"
+EA ga|z|gi
+EE ay|j|44.423
+SE f8|ay|44.423
+M gj:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '08:00\u201309:00', 'Hinta': 15.39}"
+EA ga|z|gj
+EE ay|j|44.423
+SE f8|ay|44.423
+M gk:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '09:00\u201310:00', 'Hinta': 15.63}"
+EA ga|z|gk
+EE ay|j|44.424
+SE f8|ay|44.424
+M gl:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '10:00\u201311:00', 'Hinta': 15.17}"
+EA ga|z|gl
+EE ay|j|44.424
+SE f8|ay|44.424
+M gm:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '11:00\u201312:00', 'Hinta': 12.97}"
+EA ga|z|gm
+EE ay|j|44.424
+SE f8|ay|44.424
+M gn:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '12:00\u201313:00', 'Hinta': 10.39}"
+EA ga|z|gn
+EE ay|j|44.424
+SE f8|ay|44.424
+M go:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '13:00\u201314:00', 'Hinta': 9.35}"
+EA ga|z|go
+EE ay|j|44.425
+SE f8|ay|44.425
+M gp:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '14:00\u201315:00', 'Hinta': 6.94}"
+EA ga|z|gp
+EE ay|j|44.425
+SE f8|ay|44.425
+M gq:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '15:00\u201316:00', 'Hinta': 6.75}"
+EA ga|z|gq
+EE ay|j|44.425
+SE f8|ay|44.425
+M gr:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '16:00\u201317:00', 'Hinta': 7.65}"
+EA ga|z|gr
+EE ay|j|44.425
+SE f8|ay|44.425
+M gs:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '17:00\u201318:00', 'Hinta': 9.83}"
+EA ga|z|gs
+EE ay|j|44.427
+SE f8|ay|44.427
+M gt:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '18:00\u201319:00', 'Hinta': 12.25}"
+EA ga|z|gt
+EE ay|j|44.427
+SE f8|ay|44.427
+M gu:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '19:00\u201320:00', 'Hinta': 15.38}"
+EA ga|z|gu
+EE ay|j|44.427
+SE f8|ay|44.427
+M gv:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '20:00\u201321:00', 'Hinta': 16.57}"
+EA ga|z|gv
+EE ay|j|44.427
+SE f8|ay|44.427
+M gw:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '21:00\u201322:00', 'Hinta': 15.78}"
+EA ga|z|gw
+EE ay|j|44.428
+SE f8|ay|44.428
+M gx:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '22:00\u201323:00', 'Hinta': 13.64}"
+EA ga|z|gx
+EE ay|j|44.428
+SE f8|ay|44.428
+M gy:"{'P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4': '2026-03-31', 'Tunti': '23:00\u201300:00', 'Hinta': 8.95}"
+EA ga|z|gy
+EE ay|j|44.428
+EE fr|j|44.428
+EE av|j|44.428
+M gA:"DocumentKeywords.html_to_pdf"
+M gB:"RPA.PDF.keywords.document"
+M gC:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\RPA\\PDF\\keywords\\document.py"
+P gz:gA|gB|gC|e|273
+SE gz|t|44.428
+M gD:"content"
+M gE:"\"<h1>S\u00e4hk\u00f6n hintaraportti</h1><table border='1'><tr><th>Aika</th><th>Hinta (snt)</th></tr><tr><td>00:00\u201301:00</td><td>3.81</td></tr><tr><td>01:00\u201302:00</td><td>3.34</td></tr><tr><td>02:00\u201303:00</td><td>3.94</td></tr><tr><td>03:00\u201304:00</td><td>5.55</td></tr><tr><td>04:00\u201305:00</td><td>6.26</td></tr><tr><td>05:00\u201306:00</td><td>6.48</td></tr><tr><td>06:00\u201307:00</td><td>12.28</td></tr><tr><td>07:00\u201308:00</td><td>14.44</td></tr><tr><td>08:00\u201309:00</td><td>15.39</td></tr><tr><td>09:00\u201310:00</td><td>15.63</td></tr><tr><td>10:00\u201311:00</td><td>15.17</td></tr><tr><td>11:00\u201312:00</td><td>12.97</td></tr><tr><td>12:00\u201313:00</td><td>10.39</td></tr><tr><td>13:00\u201314:00</td><td>9.35</td></tr><tr><td>14:00\u201315:00</td><td>6.94</td></tr><tr><td>15:00\u201316:00</td><td>6.75</td></tr><tr><td>16:00\u201317:00</td><td>7.65</td></tr><tr><td>17:00\u201318:00</td><td>9.83</td></tr><tr><td>18:00\u201319:00</td><td>12.25</td></tr><tr><td>19:00\u201320:00</td><td>15.38</td></tr><tr><td>20:00\u201321:00</td><td>16.57</td></tr><tr><td>21:00\u201322:00</td><td>15.78</td></tr><tr><td>22:00\u201323:00</td><td>13.64</td></tr><tr><td>23:00\u201300:00</td><td>8.95</td></tr></table>\""
+EA gD|G|gE
+M gF:"output_path"
+EA gF|G|fX
+M gG:"encoding"
+M gH:"'utf-8'"
+EA gG|G|gH
+M gI:"margin"
+EA gI|aA|aB
+M gJ:"working_directory"
+EA gJ|aU|aV
+EE t|j|45.007
+P gK:fL|m|n|e|144
+R gK|G|fX|45.007
+EE t|j|45.007
+P gL:l|m|n|e|33
+AS gL|fS|G|fX|45.007
+M gM:"Ajo valmis! Halvin: 3.34 snt, Kallein: 16.57 snt. S\u00e4\u00e4st\u00f6: 39.69 snt."
+C b0|gM|45.007
+C b0|b2|45.007
+SE eI|t|45.007
+EE t|j|45.009
+P gN:l|m|n|e|41
+M gO:"<RPA.Excel.Files.Files object at 0x000002161ABECE20>"
+AS gN|eN|eO|gO|45.009
+SE fi|t|45.009
+EE t|j|45.009
+EE t|j|45.009
+C r|l|45.022
+M gP:" status: "
+C f|gP|45.022
+M gQ:"PASS\n"
+C f|gQ|45.022
+M gR:"================================================================================\n"
+C f|gR|45.023
+ET j|e|45.023
+M gT:"Teardown tasks"
+M gU:"teardown"
+P gS:gT|gU|e|e|0
+ST gS|45.023
+M gV:"Process snapshot"
+SPS gV|45.122
+M gW:"System information:\nMemory: Total: 13.8 G, Available: 3.1 G, Used: 77.3 %\nCPUs: 16"
+P gX:e|e|e|e|0
+L I|gW|gX|0|45.324
+M gY:"Current Process: python.exe (pid: 13456, status: running)\nCommand Line: C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\python.exe -m robocorp.tasks run tasks.py\nStarted: 21:49:34\nParent pid: 20224\nResident Set Size: 111.0 M\nVirtual Memory Size: 95.1 M"
+L I|gY|gX|0|45.349
+M gZ:"OutputToPortThread|Thread ID: 20640 (daemon)"
+STD gZ|45.349
+M g0:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\threading.py"
+M g1:"_bootstrap"
+M g2:"self._bootstrap_inner()"
+TBE g0|973|g1|g2
+M g3:"Thread"
+M g4:"<Thread(OutputToPortThread, started daemon 20640)>"
+TBV aK|g3|g4
+M g5:"_bootstrap_inner"
+M g6:"self.run()"
+TBE g0|1016|g5|g6
+TBV aK|g3|g4
+M g7:"self._target(*self._args, **self._kwargs)"
+TBE g0|953|bo|g7
+TBV aK|g3|g4
+M g8:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\tasks\\_log_output_setup.py"
+M g9:"write_in_thread"
+M ha:"msg = q.get()"
+TBE g8|73|g9|ha
+M hb:"msg"
+M hc:"'ST gS|44.936\\n'"
+TBV hb|G|hc
+M hd:"client_socket"
+M he:"socket"
+M hf:"<socket.socket fd=628, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 49896), raddr=('127.0.0.1', 55712)>"
+TBV hd|he|hf
+M hg:"log"
+M hh:"module"
+M hi:"<module 'robocorp.log' from 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py'>"
+TBV hg|hh|hi
+M hj:"port_in_env"
+M hk:"'55712'"
+TBV hj|G|hk
+M hl:"q"
+M hm:"Queue"
+M hn:"<queue.Queue object at 0x0000021612C6D2A0>"
+TBV hl|hm|hn
+M ho:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\queue.py"
+M hp:"get"
+M hq:"self.not_empty.wait()"
+TBE ho|171|hp|hq
+TBV aK|hm|hn
+M hr:"block"
+TBV hr|aR|bK
+TBV bC|aU|aV
+M hs:"wait"
+M ht:"waiter.acquire()"
+TBE g0|320|hs|ht
+M hu:"Condition"
+M hv:"<Condition(<unlocked _thread.lock object at 0x0000021615C55E00>, 1)>"
+TBV aK|hu|hv
+TBV bC|aU|aV
+M hw:"waiter"
+M hx:"lock"
+M hy:"<locked _thread.lock object at 0x000002161A3DF300>"
+TBV hw|hx|hy
+M hz:"saved_state"
+TBV hz|aU|aV
+M hA:"gotit"
+TBV hA|aR|aS
+ETD 45.352
+M hB:"MainThread|Thread ID: 16568 (non daemon)"
+STD hB|45.352
+M hC:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\log\\__init__.py"
+M hD:"process_snapshot"
+M hE:"robo_logger.process_snapshot()"
+TBE hC|270|hD|hE
+M hF:"logger_instances"
+M hG:"{<robocorp.log._robo_logger._RoboLogger object at 0x0000021612BE5060>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x0000021612C6C580>: 1}"
+TBV hF|z|hG
+M hH:"robo_logger"
+M hI:"_RoboLogger"
+M hJ:"<robocorp.log._robo_logger._RoboLogger object at 0x0000021612BE5060>"
+TBV hH|hI|hJ
+M hK:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\log\\_robo_logger.py"
+M hL:"new_func"
+M hM:"return func(self, *args, **kwargs)"
+TBE hK|20|hL|hM
+TBV aK|hI|hJ
+TBV br|bs|bt
+TBV y|z|bu
+M hN:"func"
+M hO:"<function _RoboLogger.process_snapshot at 0x0000021615C7A9E0>"
+TBV hN|aO|hO
+M hP:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE hK|416|hD|hP
+TBV aK|hI|hJ
+M hQ:"hide_vars"
+TBV hQ|aR|aS
+M hR:"C:\\ProgramData\\sema4ai\\ht\\f52e50d_c5e81ff_6133770e\\lib\\site-packages\\robocorp\\log\\_robo_output_impl.py"
+M hS:"self._dump_threads(hide_vars)"
+TBE hR|748|hD|hS
+TBV hQ|aR|aS
+TBV hg|hh|hi
+M hT:"entry_id"
+M hU:"'ps_2'"
+TBV hT|G|hU
+M hV:"entry_type"
+M hW:"'process_snapshot'"
+TBV hV|G|hW
+M hX:"psutil"
+M hY:"<module 'psutil' from 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\psutil\\\\__init__.py'>"
+TBV hX|hh|hY
+M hZ:"AccessDenied"
+M h0:"type"
+M h1:"<class 'psutil.AccessDenied'>"
+TBV hZ|h0|h1
+M h2:"NoSuchProcess"
+M h3:"<class 'psutil.NoSuchProcess'>"
+TBV h2|h0|h3
+M h4:"ZombieProcess"
+M h5:"<class 'psutil.ZombieProcess'>"
+TBV h4|h0|h5
+M h6:"curr_process"
+M h7:"Process"
+M h8:"psutil.Process(pid=13456, name='python.exe', status='running', started='21:49:34')"
+TBV h6|h7|h8
+M h9:"log_info"
+M ia:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x000002161A37C040>"
+TBV h9|aO|ia
+M ib:"memory_info"
+M ic:"'Total: 13.8 G, Available: 3.1 G, Used: 77.3 %'"
+TBV ib|G|ic
+M id:"child_i"
+TBV id|aA|aB
+M ie:"child"
+TBV ie|h7|h8
+M if:"'python.exe'"
+TBV e9|G|if
+M ig:"status"
+M ih:"'running'"
+TBV ig|G|ih
+M ii:"create_time"
+M ij:"'21:49:34'"
+TBV ii|G|ij
+M ik:"ppid"
+M il:"'20224'"
+TBV ik|G|il
+M im:"cmdline"
+M in:"'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\python.exe -m robocorp.tasks run tasks.py'"
+TBV im|G|in
+M io:"rss"
+M ip:"'111.0 M'"
+TBV io|G|ip
+M iq:"vms"
+M ir:"'95.1 M'"
+TBV iq|G|ir
+M is:"proc_memory_info"
+M it:"pmem"
+M iu:"pmem(rss=116342784, vms=99700736, num_page_faults=134721, peak_wset=116957184, wset=116342784, peak_paged_pool=227384, paged_pool=227208, peak_nonpaged_pool=45592, nonpaged_pool=33176, pagefile=99700736, peak_pagefile=100274176, private=99700736)"
+TBV is|it|iu
+M iv:"message"
+M iw:"'Current Process: python.exe (pid: 13456, status: running)\\nCommand Line: C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\python.exe -m robocorp.tasks run tasks.py\\nStarted: 21:49:34\\nParent pid: 20224\\nResident Set Size: 111.0 M\\nVirtual Memory Size: 95.1 M'"
+TBV iv|G|iw
+M ix:"_RoboOutputImpl"
+M iy:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x0000021612BE4CD0>"
+TBV aK|ix|iy
+M iz:"_dump_threads"
+M iA:"stack.append((f, f.f_lineno))"
+TBE hR|769|iz|iA
+TBV aK|ix|iy
+TBV hQ|aR|aS
+M iB:"thread_id"
+M iC:"16568"
+TBV iB|aA|iC
+M iD:"frame"
+M iE:"<frame at 0x0000021614025410, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>"
+TBV iD|iD|iE
+M iF:"thread"
+M iG:"_MainThread"
+M iH:"<_MainThread(MainThread, started 16568)>"
+TBV iF|iG|iH
+M iI:"'MainThread|Thread ID: 16568 (non daemon)'"
+TBV aT|G|iI
+M iJ:"f"
+M iK:"<frame at 0x000002161331E5C0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 480, code run>"
+TBV iJ|iD|iK
+M iL:"stack"
+M iM:"[(<frame at 0x000002161A7B3DE0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py', line 270, code process_snapshot>, 270), (<frame at 0x00000216138BE440, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x000002161A75FE00, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x0000021613D1F1D0, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 748, code process_snapshot>, 748), (<frame at 0x0000021614025410, file 'C:\\\\ProgramData\\\\sema4ai\\\\ht\\\\f52e50d_c5e81ff_6133770e\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>, 769)]"
+TBV iL|X|iM
+ETD 45.368
+EPS 45.368
+ET j|e|45.412
+ER j|45.412

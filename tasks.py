@@ -30,7 +30,7 @@ def robot_data_fetcher():
         
         # 4. Arkistointi ja raportointi
         backup_excel(EXCEL_FILE)
-        pdf_file = convert_excel_to_pdf(EXCEL_FILE)
+        pdf = convert_excel_to_pdf(EXCEL_FILE)
         
         print(f"Ajo valmis! Halvin: {halvin} snt, Kallein: {kallein} snt. Säästö: {saasto:.2f} snt.")
 
@@ -123,9 +123,22 @@ def backup_excel(filename):
     os.makedirs("varmuuskopiot", exist_ok=True)
     shutil.copy(filename, f"varmuuskopiot/backup_{datetime.now().strftime('%Y%m%d')}.xlsx")
 
-def convert_excel_to_pdf(filename):
+def convert_excel_to_pdf(excel_filename):
     pdf = PDF()
-    pdf_name = filename.replace(".xlsx", ".pdf")
-    # Huom: RPA.PDF:n excel_to_pdf vaatii yleensä Office-asennuksen tai kikkailua. 
-    # Usein helpompaa on tallentaa HTML-raportti ja muuttaa se PDF:ksi.
+    pdf_name = excel_filename.replace(".xlsx", ".pdf")
+    
+    # Luetaan Excel-tiedon sisältö raporttia varten
+    excel = Files()
+    excel.open_workbook(excel_filename)
+    data = excel.read_worksheet_as_table(header=True)
+    excel.close_workbook()
+
+    # Luodaan HTML-sisältö
+    html_content = "<h1>Sähkön hintaraportti</h1><table border='1'><tr><th>Aika</th><th>Hinta (snt)</th></tr>"
+    for row in data:
+        html_content += f"<tr><td>{row['Tunti']}</td><td>{row['Hinta']}</td></tr>"
+    html_content += "</table>"
+
+    # Tallennetaan PDF:ksi
+    pdf.html_to_pdf(html_content, pdf_name)
     return pdf_name

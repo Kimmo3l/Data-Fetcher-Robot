@@ -1,0 +1,156 @@
+channels:
+- conda-forge
+dependencies:
+- bzip2=1.0.8
+- ca-certificates=2026.2.25
+- libffi=3.5.2
+- liblzma=5.8.2
+- liblzma-devel=5.8.2
+- libsqlite=3.52.0
+- libzlib=1.3.2
+- openssl=3.6.1
+- packaging=26.0
+- pip=24.0
+- python=3.10.12
+- setuptools=82.0.1
+- tk=8.6.13
+- tzdata=2025c
+- ucrt=10.0.26100.0
+- vc=14.3
+- vc14_runtime=14.44.35208
+- vcomp14=14.44.35208
+- wheel=0.46.3
+- xz=5.8.2
+- xz-tools=5.8.2
+- pip:
+  - attrs==26.1.0
+  - beautifulsoup4==4.14.3
+  - cached-property==2.0.1
+  - certifi==2026.2.25
+  - cffi==2.0.0
+  - chardet==3.0.4
+  - charset-normalizer==3.4.6
+  - click==8.3.1
+  - colorama==0.4.6
+  - comtypes==1.4.16
+  - convertdate==2.4.1
+  - cryptography==41.0.7
+  - dataclasses-json==0.6.7
+  - decorator==5.2.1
+  - defusedxml==0.7.1
+  - dnspython==2.8.0
+  - docstring_parser_fork==0.0.5
+  - docutils==0.22.4
+  - et_xmlfile==2.0.0
+  - exceptiongroup==1.3.1
+  - exchangelib==4.9.0
+  - fire==0.4.0
+  - fonttools==4.62.1
+  - fpdf2==2.7.5
+  - furl==2.1.4
+  - graphviz==0.13.2
+  - greenlet==3.3.2
+  - h11==0.16.0
+  - hijri-converter==2.3.2.post1
+  - hijridate==2.3.0
+  - holidays==0.21.13
+  - htmldocx==0.0.6
+  - idna==3.11
+  - importlib_metadata==9.0.0
+  - isodate==0.7.2
+  - java-access-bridge-wrapper==1.2.0
+  - jsonpath-ng==1.8.0
+  - jsonschema==4.26.0
+  - jsonschema-specifications==2025.9.1
+  - korean-lunar-calendar==0.3.1
+  - lxml==6.0.2
+  - marshmallow==3.26.2
+  - more-itertools==10.8.0
+  - mss==6.1.0
+  - mypy_extensions==1.1.0
+  - netsuitesdk==1.24.0
+  - notifiers==1.3.6
+  - O365==2.0.26
+  - oauthlib==3.3.1
+  - openpyxl==3.1.5
+  - orderedmultidict==1.0.2
+  - outcome==1.3.0.post0
+  - pdfminer.six==20221105
+  - pendulum==2.1.2
+  - pillow==10.4.0
+  - platformdirs==4.9.4
+  - playwright==1.58.0
+  - psutil==5.9.8
+  - pycparser==3.0
+  - pyee==13.0.1
+  - Pygments==2.20.0
+  - PyJWT==2.12.1
+  - PyMeeus==0.5.12
+  - pynput-robocorp-fork==5.0.0
+  - pyotp==2.9.0
+  - pypdf==3.17.4
+  - pyperclip==1.11.0
+  - PySocks==1.7.1
+  - pyspnego==0.12.1
+  - python-dateutil==2.9.0.post0
+  - python-docx==0.8.11
+  - python-dotenv==1.2.2
+  - pytz==2026.1.post1
+  - pytz-deprecation-shim==0.1.0.post0
+  - pytzdata==2020.1
+  - pywin32==306
+  - pywinauto==0.6.9
+  - PyYAML==6.0.3
+  - referencing==0.37.0
+  - requests==2.33.1
+  - requests-file==3.0.1
+  - requests-oauthlib==1.3.1
+  - requests-toolbelt==1.0.0
+  - requests_ntlm==1.3.0
+  - robocorp==1.4.0
+  - robocorp-browser==2.2.1
+  - robocorp-log==2.9.6
+  - robocorp-storage==1.1.0
+  - robocorp-tasks==2.10.0
+  - robocorp-vault==1.3.3
+  - robocorp-workitems==1.5.0
+  - robotframework==6.1.1
+  - robotframework-pythonlibcore==4.5.0
+  - robotframework-requests==0.9.7
+  - robotframework-sapguilibrary==1.1
+  - robotframework-seleniumlibrary==6.8.0
+  - robotframework-seleniumtestability==2.1.0
+  - rpaframework==28.0.0
+  - rpaframework-core==11.3.4
+  - rpaframework-pdf==7.3.3
+  - rpaframework-windows==7.5.2
+  - rpds-py==0.30.0
+  - selenium==4.15.2
+  - simple-salesforce==1.12.9
+  - six==1.17.0
+  - smartsheet-python-sdk==3.7.2
+  - sniffio==1.3.1
+  - sortedcontainers==2.4.0
+  - soupsieve==2.8.3
+  - sspilib==0.5.0
+  - stringcase==1.2.0
+  - tenacity==8.5.0
+  - termcolor==3.3.0
+  - tomli==2.4.1
+  - trio==0.33.0
+  - trio-websocket==0.12.2
+  - tweepy==3.10.0
+  - typing-inspect==0.9.0
+  - typing_extensions==4.15.0
+  - tzlocal==4.3.1
+  - uiautomation==2.0.29
+  - urllib3==2.6.3
+  - validators==0.20.0
+  - webdriver-manager==4.0.2
+  - wrapt==2.1.2
+  - wsproto==1.3.2
+  - xlrd==2.0.2
+  - xlutils==2.0.0
+  - xlwt==1.3.0
+  - zeep==4.3.2
+  - zipp==3.23.0

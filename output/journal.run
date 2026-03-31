@@ -1,0 +1,47 @@
+{"when":1774981423,"controller":"rcc.sema4aicode","event":"start task","detail":"name=Run Task from=c:\\DF\\Data-Fetcher-Robot\\robot.yaml","comment":"at task environment setup"}
+{"when":1774981423,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 00/15 v20.3.3 0.162s Context: \"Kimmo Eloranta\" \u003cLENOVOKIMMO\\elora@LenovoKimmo\u003e [windows_amd64/Microsoft Windows [Version 10.0.26200.8039]]."}
+{"when":1774981423,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 01/15 v20.3.3 0.012s Fresh [shared mode] holotree environment dcb10307-2e62-0468-075f-b0fb974994f1. (parent/pid: 4104/22660)"}
+{"when":1774981423,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 02/15 v20.3.3 0.015s Holotree blueprint is \"8cf1c7500a4e7a21\" [windows_amd64 with 15 workers on 16 CPUs from \"conda.yaml\"]."}
+{"when":1774981423,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 14/15 v20.3.3 0.223s Restore space from library [with 15 workers on 16 CPUs; with compression: true]."}
+{"when":1774981424,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 15/15 v20.3.3 0.707s Fresh holotree done [with 15 workers on 16 CPUs]."}
+{"when":1774981424,"controller":"rcc.sema4aicode","event":"start","detail":"robot","comment":"started"}
+{"when":1774981424,"controller":"rcc.sema4aicode","event":"run","detail":"robot","comment":"task run"}
+{"when":1774981424,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 0 to 1 ... map[11776:python.exe]"}
+{"when":1774981439,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 1 to 2 ... map[9300:node.exe 11776:python.exe]"}
+{"when":1774981440,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 2 to 3 ... map[8948:chrome-headless-shell.exe 9300:node.exe 11776:python.exe]"}
+{"when":1774981441,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 3 to 6 ... map[8948:chrome-headless-shell.exe 9300:node.exe 11776:python.exe 13612:chrome-headless-shell.exe 15236:chrome-headless-shell.exe 26268:chrome-headless-shell.exe]"}
+{"when":1774981475,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 6 to 1 ... map[11776:python.exe]"}
+{"when":1774981475,"controller":"rcc.sema4aicode","event":"robot exit","detail":"From rcc \"v20.3.3\" (controller: \"Sema4aiCode\") point of view, \"actual main robot run\" was SUCCESS.","comment":"rcc point of view"}
+{"when":1774981475,"controller":"rcc.sema4aicode","event":"processes","detail":"final","comment":"count: 0"}
+{"when":1774981476,"controller":"rcc.sema4aicode","event":"stop","detail":"robot","comment":"done"}
+{"when":1774982687,"controller":"rcc.sema4aicode","event":"start task","detail":"name=Run Task from=c:\\DF\\Data-Fetcher-Robot\\robot.yaml","comment":"at task environment setup"}
+{"when":1774982687,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 00/15 v20.3.3 0.165s Context: \"Kimmo Eloranta\" \u003cLENOVOKIMMO\\elora@LenovoKimmo\u003e [windows_amd64/Microsoft Windows [Version 10.0.26200.8039]]."}
+{"when":1774982687,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 01/15 v20.3.3 0.010s Fresh [shared mode] holotree environment dcb10307-2e62-0468-075f-b0fb974994f1. (parent/pid: 17344/23072)"}
+{"when":1774982687,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 02/15 v20.3.3 0.012s Holotree blueprint is \"8cf1c7500a4e7a21\" [windows_amd64 with 15 workers on 16 CPUs from \"conda.yaml\"]."}
+{"when":1774982687,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 14/15 v20.3.3 0.199s Restore space from library [with 15 workers on 16 CPUs; with compression: true]."}
+{"when":1774982688,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 15/15 v20.3.3 0.603s Fresh holotree done [with 15 workers on 16 CPUs]."}
+{"when":1774982688,"controller":"rcc.sema4aicode","event":"start","detail":"robot","comment":"started"}
+{"when":1774982688,"controller":"rcc.sema4aicode","event":"run","detail":"robot","comment":"task run"}
+{"when":1774982688,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 0 to 1 ... map[7728:python.exe]"}
+{"when":1774982701,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 1 to 2 ... map[7728:python.exe 12896:node.exe]"}
+{"when":1774982702,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 2 to 6 ... map[7728:python.exe 9504:chrome-headless-shell.exe 12896:node.exe 13520:chrome-headless-shell.exe 22332:chrome-headless-shell.exe 22976:chrome-headless-shell.exe]"}
+{"when":1774982736,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 6 to 1 ... map[7728:python.exe]"}
+{"when":1774982736,"controller":"rcc.sema4aicode","event":"robot exit","detail":"From rcc \"v20.3.3\" (controller: \"Sema4aiCode\") point of view, \"actual main robot run\" was FAILURE, reason: exit status 1","comment":"rcc point of view"}
+{"when":1774982736,"controller":"rcc.sema4aicode","event":"processes","detail":"final","comment":"count: 0"}
+{"when":1774982737,"controller":"rcc.sema4aicode","event":"stop","detail":"robot","comment":"done"}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"start task","detail":"name=Run Task from=c:\\DF\\Data-Fetcher-Robot\\robot.yaml","comment":"at task environment setup"}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 00/15 v20.3.3 0.164s Context: \"Kimmo Eloranta\" \u003cLENOVOKIMMO\\elora@LenovoKimmo\u003e [windows_amd64/Microsoft Windows [Version 10.0.26200.8039]]."}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 01/15 v20.3.3 0.011s Fresh [shared mode] holotree environment dcb10307-2e62-0468-075f-b0fb974994f1. (parent/pid: 5728/20224)"}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 02/15 v20.3.3 0.013s Holotree blueprint is \"8cf1c7500a4e7a21\" [windows_amd64 with 15 workers on 16 CPUs from \"conda.yaml\"]."}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 14/15 v20.3.3 0.204s Restore space from library [with 15 workers on 16 CPUs; with compression: true]."}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"environment","detail":"build","comment":"Progress: 15/15 v20.3.3 0.574s Fresh holotree done [with 15 workers on 16 CPUs]."}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"start","detail":"robot","comment":"started"}
+{"when":1774982973,"controller":"rcc.sema4aicode","event":"run","detail":"robot","comment":"task run"}
+{"when":1774982974,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 0 to 1 ... map[13456:python.exe]"}
+{"when":1774982987,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 1 to 2 ... map[3436:node.exe 13456:python.exe]"}
+{"when":1774982987,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 2 to 3 ... map[3436:node.exe 13456:python.exe 17936:chrome-headless-shell.exe]"}
+{"when":1774982988,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 3 to 6 ... map[3436:node.exe 4264:chrome-headless-shell.exe 13456:python.exe 14836:chrome-headless-shell.exe 17936:chrome-headless-shell.exe 23636:chrome-headless-shell.exe]"}
+{"when":1774983020,"controller":"rcc.sema4aicode","event":"processes","detail":"updated","comment":"count from 6 to 1 ... map[13456:python.exe]"}
+{"when":1774983020,"controller":"rcc.sema4aicode","event":"robot exit","detail":"From rcc \"v20.3.3\" (controller: \"Sema4aiCode\") point of view, \"actual main robot run\" was SUCCESS.","comment":"rcc point of view"}
+{"when":1774983020,"controller":"rcc.sema4aicode","event":"processes","detail":"final","comment":"count: 0"}
+{"when":1774983021,"controller":"rcc.sema4aicode","event":"stop","detail":"robot","comment":"done"}
