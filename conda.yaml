@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10.12
+  - pip=24.0
+  - pip:
+      - rpaframework==28.0.0
+      - robocorp==1.4.0
+      - robocorp-browser==2.2.1
