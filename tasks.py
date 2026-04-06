@@ -5,6 +5,7 @@ from RPA.PDF import PDF
 import os
 import shutil
 from datetime import datetime
+from RPA.Email.ImapSmtp import ImapSmtp
 
 # Määritellään tiedostonimi vakiona, jotta se on helppo vaihtaa
 EXCEL_FILE = "sahko_hinnat.xlsx"
@@ -31,6 +32,8 @@ def robot_data_fetcher():
         # 4. Arkistointi ja raportointi
         backup_excel(EXCEL_FILE)
         pdf = convert_excel_to_pdf(EXCEL_FILE)
+
+        laheta_sahkoposti_ilmoitus(halvin, kallein)
 
         nayta_tulos_selaimessa(halvin, kallein, saasto)
         
@@ -155,3 +158,33 @@ def convert_excel_to_pdf(excel_filename):
     # Tallennetaan PDF:ksi
     pdf.html_to_pdf(html_content, pdf_name)
     return pdf_name
+
+def laheta_sahkoposti_ilmoitus(halvin, kallein):
+    """Lähettää yhteenvedon Gmaililla käyttäen sovellussalasanaa."""
+    gmail = ImapSmtp(smtp_server="smtp.gmail.com", smtp_port=587)
+    
+    # KORVAA NÄMÄ OMILLA TIEDOILLASI
+    KAYTTAJA = "a.b@gmail.com"
+    SALASANA = "x" # Se 16-merkkinen App Password
+    VASTAANOTTAJA = "a.b@gmail.com"
+ 
+    try:
+        gmail.authorize(account=KAYTTAJA, password=SALASANA)
+        
+        viesti = (
+            f"Pörssisähkörobotti on suorittanut haun.\n\n"
+            f"Päivän halvin hinta: {halvin} snt/kWh\n"
+            f"Päivän kallein hinta: {kallein} snt/kWh\n"
+            f"Terveisin, Robottisi"
+        )
+        
+        gmail.send_message(
+            sender=KAYTTAJA,
+            recipients=VASTAANOTTAJA,
+            subject=f"Sähköraportti: Halvin {halvin} snt",
+            body=viesti
+        )
+        print("Sähköposti lähetetty onnistuneesti!")
+        
+    except Exception as e:
+        print(f"Sähköpostin lähetys epäonnistui: {e}")
