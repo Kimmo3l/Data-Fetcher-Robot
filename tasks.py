@@ -13,7 +13,7 @@ EXCEL_FILE = "sahko_hinnat.xlsx"
 def robot_data_fetcher():
     """Hakee sähkön hinnat, tallentaa Exceliin ja tekee raportin."""
     browser.configure(
-        headless=True,
+        headless=False,
         slowmo=100,
         )
 
@@ -31,6 +31,8 @@ def robot_data_fetcher():
         # 4. Arkistointi ja raportointi
         backup_excel(EXCEL_FILE)
         pdf = convert_excel_to_pdf(EXCEL_FILE)
+
+        nayta_tulos_selaimessa(halvin, kallein, saasto)
         
         print(f"Ajo valmis! Halvin: {halvin} snt, Kallein: {kallein} snt. Säästö: {saasto:.2f} snt.")
 
@@ -122,6 +124,17 @@ def calculate_prices_and_savings(filename):
 def backup_excel(filename):
     os.makedirs("varmuuskopiot", exist_ok=True)
     shutil.copy(filename, f"varmuuskopiot/backup_{datetime.now().strftime('%Y%m%d')}.xlsx")
+
+def nayta_tulos_selaimessa(halvin, kallein, saasto):
+    page = browser.page()
+    page.set_viewport_size({"width": 400, "height": 400})
+    # Kirjoitetaan tulokset suoraan valkoiselle sivulle
+    sisalto = f"<h1>Tiedot haettu ja raportti valmis!</h1><br><h2>Sähkoraportti:</h2><p>Halvin: {halvin}</p><p>Kallein: {kallein}</p><p>Säästö: {saasto:.2f}</p>"
+    page.set_content(sisalto)
+    
+    # Odotetaan, että käyttäjä näkee sivun
+    import time
+    time.sleep(8)
 
 def convert_excel_to_pdf(excel_filename):
     pdf = PDF()
