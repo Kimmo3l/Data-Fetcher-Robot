@@ -8,7 +8,7 @@ import urllib.parse
 
 import os
 import shutil
-from datetime import datetime
+from datetime import datetime, timedelta
 
 load_dotenv()
 
@@ -163,11 +163,6 @@ def nayta_tulos_selaimessa(halvin, kallein, saasto):
     # Odotetaan, että käyttäjä näkee sivun
     import time
     time.sleep(8)
-
-from datetime import datetime, timedelta
-import urllib.parse
-from RPA.Email.ImapSmtp import ImapSmtp
-import os
 
 def laheta_sahkoposti_ilmoitus(halvin, kallein, tunti_teksti):
     """Lähettää yhteenvedon ja dynaamisen kalenterilinkin Gmaililla."""
