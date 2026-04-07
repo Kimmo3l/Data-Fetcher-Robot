@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 
-# Määritellään tiedostonimi vakiona, jotta se on helppo vaihtaa
+# Määritellään tiedostonimi
 EXCEL_FILE = "sahko_hinnat.xlsx"
 
 @task
@@ -31,7 +31,7 @@ def robot_data_fetcher():
         # Tilastot koko päivästä (PDF:ää ja popupia varten)
         halvin_pva, kallein_pva, saasto = calculate_prices_and_savings(EXCEL_FILE)
         
-        # --- UUSI LOGIIKKA FUNKTIONA ---
+        # Hakee parhaan vaihtoehdon tulevista tunneista
         ehdotus = etsi_paras_tuleva_tunti(hinnat_lista)
 
         if ehdotus:
@@ -92,7 +92,7 @@ def fetch_hourly_prices():
 def save_to_excel(data_list, filename):
     excel = Files()
     
-    # POISTETAAN vanha tiedosto, jos se on olemassa, jotta rivejä ei kerry liikaa
+    # POISTETAAN vanha tiedosto, jos se on olemassa
     if os.path.exists(filename):
         try:
             os.remove(filename)
@@ -106,7 +106,7 @@ def save_to_excel(data_list, filename):
     today = datetime.now().strftime("%Y-%m-%d")
     final_data = [{"Päivämäärä": today, **rivi} for rivi in data_list]
     
-    # Nyt tässä on tasan 24 riviä
+    
     excel.append_rows_to_worksheet(final_data, header=True)
     excel.save_workbook()
     excel.close_workbook()
@@ -156,7 +156,7 @@ def convert_excel_to_pdf(excel_filename):
 def nayta_tulos_selaimessa(halvin, kallein, saasto):
     page = browser.page()
     page.set_viewport_size({"width": 400, "height": 400})
-    # Kirjoitetaan tulokset suoraan valkoiselle sivulle
+    # Kirjoitetaan tulokset suoraan tyhjälle sivulle selaimeen
     sisalto = f"<h1>Tiedot haettu ja raportti valmis!</h1><br><h2>Sähkoraportti:</h2><p>Halvin: {halvin}</p><p>Kallein: {kallein}</p><p>Säästö: {saasto:.2f}</p>"
     page.set_content(sisalto)
     
@@ -203,9 +203,9 @@ def laheta_sahkoposti_ilmoitus(halvin, kallein, tunti_teksti):
     try:
         gmail.authorize(account=KAYTTAJA, password=SALASANA)
 
-        # Käytetään viestissä "a" ja "o" -kirjaimia varmuuden vuoksi
+        
         viesti = (
-            f"Pörssisähkorobotti on suorittanut haun.\n\n"
+            f"Pörssisähkörobotti on suorittanut haun.\n\n"
             f"Päivän halvin hinta: {halvin} snt/kWh (klo {tunti_teksti})\n"
             f"Päivän kallein hinta: {kallein} snt/kWh\n\n"
             f"LISÄÄ HALVIN TUNTI KALENTERIIN KLIKKAAMALLA TÄSTÄ:\n"
@@ -239,5 +239,4 @@ def etsi_paras_tuleva_tunti(hinnat_lista):
     if not tulevat_hinnat:
         return None
     
-    # Palauttaa koko sanakirjan (Tunti ja Hinta) halvimmasta tulevasta hetkestä
     return min(tulevat_hinnat, key=lambda x: x['Hinta'])
